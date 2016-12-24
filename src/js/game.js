@@ -9,6 +9,10 @@ function Cell() {
     neighbors += x;
   }
 
+  function resetNeighbors() {
+    neighbors = 0;
+  }
+
   function isUnderPopulated() {
     return neighbors < 2;
   }
@@ -26,6 +30,7 @@ function Cell() {
     visited,
     neighbors: _ => neighbors,
     addNeighbor,
+    resetNeighbors,
     isUnderPopulated,
     isOverPopulated,
     isResurrected
@@ -89,7 +94,7 @@ function Game(size) {
   function updateNeighborsForCell(i, j) {
     let cell = grid[i][j];
     const indices = [[i - 1, j - 1], [i, j - 1], [i + 1, j - 1], [i + 1, j], [i + 1, j + 1], [i, j + 1], [i - 1, j + 1], [i - 1, j]];
-    cell.neighbors = 0;
+    cell.resetNeighbors();
     if (cell.alive) {
       cell.visited = 1;
     }
@@ -137,10 +142,7 @@ function Game(size) {
   }
 }
 
-
-
-
-document.addEventListener("DOMContentLoaded", function(e) {
+document.addEventListener('DOMContentLoaded', function(e) {
   const game = Game(10);
   game.draw();
 
