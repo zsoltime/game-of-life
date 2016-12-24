@@ -5,10 +5,10 @@ It's the last day of my [3 weeks challenge](https://github.com/zsoltime/game-cha
 ## User Stories
 
 - [x] When I open the game, it randomly generates a board and start playing
-- [ ] I can start and stop the board
-- [ ] I can set up the board
-- [ ] I can clear the board
-- [ ] When I press start, the game will play out
-- [ ] Each time the board changes, I can see how many generations have gone by
+- [x] I can start and stop the board
+- [x] I can set up the board
+- [x] I can clear the board
+- [x] When I press start, the game will play out
+- [x] Each time the board changes, I can see how many generations have gone by
 
 ## Next Steps

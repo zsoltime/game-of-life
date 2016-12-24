@@ -3,8 +3,39 @@ body
   display: flex
   flex-direction: column
   height: 100%
-  justify-content: center
+  justify-content: space-around
   overflow: hidden
+  user-select: none
 
 h1
   font-weight: 300
+
+.stats
+  color: rgba(black, .5)
+  font-weight: 700
+
+.buttons
+  align-items: center
+  display: flex
+  justify-content: space-around
+  width: 80vw
+
+button
+  background: color(teal)
+  border: none
+  border-radius: 2px
+  color: #fff
+  cursor: pointer
+  font-size: 1.2em
+  padding: 0.375em 1.5em
+  outline: none
+  transition: .3s background ease
+
+  &:hover
+    background: darken(color(teal), 5%)
+
+  &.stop
+    background: color(red)
+
+    &:hover
+      background: darken(color(red), 5%)
